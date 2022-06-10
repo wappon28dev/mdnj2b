@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+$custom-typography: mat-typography-config(
+  $font-family: 'M PLUS 1p'
+);
+@include mat-core($custom-typography);
+
+* {
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+html, body {
+  margin: 0;
+  font-family: "M PLUS 1p", "Helvetica Neue", sans-serif;
+}
