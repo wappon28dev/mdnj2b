@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
-
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,10 +7,13 @@ import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
 })
 export class AppComponent {
   constructor(private _snackBar: MatSnackBar) {}
-
   title: String = 'mdnj2b';
+  hasToggledTheme: boolean = false;
 
   openSnackBar(): void {
     this._snackBar.open('こんにちは', '', { duration: 3000 });
+  }
+  toggledTheme(): void {
+    this.hasToggledTheme = !this.hasToggledTheme;
   }
 }

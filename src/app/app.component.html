@@ -1,15 +1,26 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <button mat-icon-button class="">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>
-      <a mat-button routerLink="" class="header-button">Exchanges</a>
-    </span>
-    <a mat-button (click)="openSnackBar()" routerLink="" class="header-button">Login</a>
-  </mat-toolbar-row>
-</mat-toolbar>
-<router-outlet>
-  <p>{{ title }}</p>
-  <p> こんにちは </p>
-</router-outlet>
+<div class="mat-app-background" [ngClass]="hasToggledTheme ? 'dark-theme' : 'light-theme'" [style.height]="'100%'">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <button mat-icon-button class="">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>mdnj2b</span>
+      <span>
+        <a mat-button routerLink="/" class="header-button">ホーム</a>
+      </span>
+      <span>
+        <a mat-button routerLink="/info" class="header-button">情報</a>
+      </span>
+      <span>
+        <a mat-button color="primary" (click)="openSnackBar()" routerLink="" class="header-button">すなっくばー</a>
+      </span>
+      <span class="toolbar-spacer"></span>
+      <mat-icon>brightness_5</mat-icon>
+      <mat-slide-toggle [checked]="hasToggledTheme" (change)="toggledTheme()"></mat-slide-toggle>
+      <mat-icon>brightness_2</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <router-outlet>
+  </router-outlet>
+</div>
