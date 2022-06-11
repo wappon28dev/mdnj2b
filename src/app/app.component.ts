@@ -8,12 +8,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class AppComponent {
   constructor(private _snackBar: MatSnackBar) {}
   title: String = 'mdnj2b';
-  hasToggledTheme: boolean = false;
+  isDarkMode: boolean = false;
 
   openSnackBar(): void {
     this._snackBar.open('こんにちは', '', { duration: 3000 });
   }
   toggledTheme(): void {
-    this.hasToggledTheme = !this.hasToggledTheme;
+    this.isDarkMode = !this.isDarkMode;
   }
 }

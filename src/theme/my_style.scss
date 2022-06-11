@@ -1,0 +1,79 @@
+@use "@angular/material" as mat;
+@import "~@angular/material/theming";
+@include mat.core();
+
+$mdnj2b-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$indigo-palette),
+      accent: mat.define-palette(mat.$pink-palette, A200, A100, A400),
+      warn: mat.define-palette(mat.$red-palette),
+    ),
+  )
+);
+
+@include mat.all-component-themes($mdnj2b-theme);
+
+// primary, accent, warn
+$app-light-theme: mat-light-theme(
+  mat-palette($mat-orange, 600),
+  mat-palette($mat-blue, 800),
+  mat-palette($mat-red, 500)
+);
+
+// primary, accent, warn
+$app-dark-theme: mat-dark-theme(
+  mat-palette($mat-orange, A200),
+  mat-palette($mat-blue, A400),
+  mat-palette($mat-red, A400)
+);
+
+.light-theme {
+  @include angular-material-theme($app-light-theme);
+}
+
+.dark-theme {
+  @include angular-material-theme($app-dark-theme);
+}
+
+// define font
+$my_typography: mat.define-typography-config(
+  $font-family: "Zen Maru Gothic",
+  $display-4: mat-typography-level(112px, 123px, 300, $letter-spacing: -0.05em),
+  $display-3: mat-typography-level(56px, 62px, 400, $letter-spacing: -0.02em),
+  $display-2: mat-typography-level(45px, 53px, 400, $letter-spacing: -0.005em),
+  $display-1: mat-typography-level(34px, 44px, 400),
+  $headline: mat-typography-level(24px, 35px, 400),
+  $title: mat-typography-level(20px, 32px, 500),
+  $subheading-2: mat-typography-level(17px, 30px, 400),
+  $subheading-1: mat-typography-level(16px, 26px, 400),
+  $body-2: mat-typography-level(15px, 26px, 500),
+  $body-1: mat-typography-level(15px, 22px, 400),
+  $caption: mat-typography-level(13px, 20px, 400),
+  $button: mat-typography-level(15px, 15px, 500),
+);
+@include mat.core($my_typography);
+
+.mat-display-4,
+.mat-display-3,
+.mat-display-2,
+.mat-display-1,
+.mat-small,
+.mat-caption {
+  opacity: 0.54;
+}
+
+.mat-h1,
+.mat-headline,
+.mat-h2,
+.mat-title,
+.mat-h3,
+.mat-subheading-2,
+.mat-h4,
+.mat-subheading-1,
+.mat-body,
+.mat-body-1,
+.mat-body-strong,
+.mat-body-2 {
+  opacity: 0.87;
+}

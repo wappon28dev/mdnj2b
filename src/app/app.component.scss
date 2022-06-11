@@ -1,9 +1,21 @@
-
 // tool bar
 .toolbar-spacer {
   flex: 1 1 auto;
 }
 
-.mat-app-background{
-  min-height: 100vh;
+.navbar {
+  justify-content: space-between;
+  padding: 10px;
+}
+
+mat-icon {
+  vertical-align: middle;
+}
+
+.header-button {
+  font-weight: 500;
+}
+
+.toggle {
+  padding-left: 20px;
 }

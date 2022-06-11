@@ -1,5 +1,32 @@
-* {
-  font-family: "M PLUS 1p", sans-serif;
+@use "@angular/material" as mat;
+
+.main {
+  width: 100%;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.title {
+  padding: 80px;
+  margin: auto;
+  text-align: center;
+}
+
+.headline {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.card {
+  padding-bottom: 20px;
 }
 
 $itemColors: (
