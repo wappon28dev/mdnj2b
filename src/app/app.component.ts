@@ -3,22 +3,21 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { FormControl } from '@angular/forms';
 
-export class AppConst {
+export class Global {
   isDarkMode = false;
 }
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  AppConst: AppConst;
+  Global: Global;
   constructor(
     private _snackBar: MatSnackBar,
     private overlay: OverlayContainer
   ) {
-    this.AppConst = new AppConst();
+    this.Global = new Global();
   }
 
   @HostBinding('class') className = '';
@@ -31,7 +30,7 @@ export class AppComponent implements OnInit {
   }
 
   setThemeMode(value: boolean): void {
-    this.AppConst.isDarkMode = value;
+    this.Global.isDarkMode = value;
     if (value) {
       this.overlay.getContainerElement().classList.add('darkMode');
     } else {
@@ -39,14 +38,19 @@ export class AppComponent implements OnInit {
     }
   }
 
+  isSystemDarkMode = (): boolean =>
+    window.matchMedia('(prefers-color-scheme: dark)').matches;
+
   ngOnInit(): void {
-    this.theme.setValue('dark');
-    this.AppConst.isDarkMode = true;
+    // initial
+    this.theme.setValue('system');
+    this.Global.isDarkMode = this.isSystemDarkMode();
+
     this.theme.valueChanges.subscribe((mode) => {
       let value = false;
       switch (mode) {
         case 'system':
-          value = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          value = this.isSystemDarkMode();
           break;
         case 'light':
           value = false;
