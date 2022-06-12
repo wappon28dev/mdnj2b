@@ -1,4 +1,4 @@
-<div class="mat-app-background" [ngClass]="isDarkMode ? 'dark-theme' : 'light-theme'" [style.height]="'100%'">
+<div class="mat-app-background" [ngClass]="AppConst.isDarkMode ? 'dark-theme' : 'light-theme'" [style.height]="'100%'">
   <mat-toolbar class="navbar">
 
     <!-- for mobile -->
@@ -12,7 +12,7 @@
           ホーム
         </button>
         <button mat-menu-item routerLink="/info" class="header-button">
-          <mat-icon>info</mat-icon>
+          <mat-icon class="material-icons-outlined">info</mat-icon>
           情報
         </button>
         <button mat-menu-item color="primary" (click)="openSnackBar()" class="header-button">
@@ -34,11 +34,10 @@
         ホーム
       </button>
       <button mat-button routerLink="/info" class="header-button">
-        <mat-icon>info</mat-icon>
+        <mat-icon class="material-icons-outlined">info</mat-icon>
         情報
       </button>
     </span>
-
     <span class="toolbar-spacer"></span>
     <span fxHide.lt-sm="true">
       <button mat-raised-button color="primary" (click)="openSnackBar()" class="header-button">
@@ -47,14 +46,22 @@
       </button>
     </span>
 
-    <div class="toggle">
-      <mat-icon>brightness_5</mat-icon>
-      <mat-slide-toggle [checked]="isDarkMode" (change)="toggledTheme()"></mat-slide-toggle>
-      <mat-icon>brightness_2</mat-icon>
+    <div class="themeSelector">
+      <section>
+        <mat-button-toggle-group name="theme" [formControl]="theme">
+          <mat-button-toggle value="system">
+            <mat-icon>settings_brightness</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="light">
+            <mat-icon>brightness_7</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="dark">
+            <mat-icon>nights_stay</mat-icon>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </section>
     </div>
   </mat-toolbar>
-
-
   <router-outlet>
   </router-outlet>
 </div>

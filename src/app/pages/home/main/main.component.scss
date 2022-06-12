@@ -10,14 +10,17 @@
 }
 
 .title {
-  padding: 80px;
+  padding: 100px;
   margin: auto;
+  margin-bottom: -60px;
   text-align: center;
+  background-color: var(--primary-color);
 }
 
 .headline {
   font-size: 30px;
-  font-weight: 700;
+  padding-bottom: 30px;
+  color: var(--background-color);
 }
 
 .example-header-image {

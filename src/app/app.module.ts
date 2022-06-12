@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { MaterialModule } from './modules/material/material.module';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -20,6 +21,8 @@ import { PageNotFoundComponent } from './pages/error/page_not_found/page_not_fou
     MaterialModule,
     LayoutModule,
     FlexLayoutModule,
+    MaterialModule,
+    ReactiveFormsModule,
   ],
 
   providers: [],

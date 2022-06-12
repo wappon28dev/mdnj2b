@@ -6,10 +6,14 @@
 .navbar {
   justify-content: space-between;
   padding: 10px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 mat-icon {
-  vertical-align: middle;
+  vertical-align: text-bottom;
 }
 
 .header-button {
@@ -18,4 +22,12 @@ mat-icon {
 
 .toggle {
   padding-left: 20px;
+}
+
+.themeSelector {
+  padding-left: 20px;
+}
+
+.themeSelector mat-icon {
+  vertical-align: sub;
 }
