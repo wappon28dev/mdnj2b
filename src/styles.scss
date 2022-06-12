@@ -1,44 +1,12 @@
+@use "theme/my_style.scss";
+@use "theme/fonts.scss";
 @import "~@angular/material/theming";
-@include mat-core();
 
-$custom-typography: mat-typography-config(
-  $font-family: "M PLUS 1p",
-);
-@include mat-core($custom-typography);
-
-* {
-  font-family: "M PLUS 1p", sans-serif;
-}
-
-html,
-body {
+body,
+html {
+  padding: 0;
   margin: 0;
-  font-family: "M PLUS 1p", sans-serif;
 }
-
-$app-light-primary: mat-palette($mat-orange, 600);
-$app-light-accent: mat-palette($mat-blue, 800);
-$app-light-warn: mat-palette($mat-red, 500);
-
-$app-dark-primary: mat-palette($mat-orange, A200);
-$app-dark-accent: mat-palette($mat-blue, A400);
-$app-dark-warn: mat-palette($mat-red, A400);
-
-$app-light-theme: mat-light-theme(
-  $app-light-primary,
-  $app-light-accent,
-  $app-light-warn
-);
-$app-dark-theme: mat-dark-theme(
-  $app-dark-primary,
-  $app-dark-accent,
-  $app-dark-warn
-);
-
-.light-theme {
-  @include angular-material-theme($app-light-theme);
-}
-
-.dark-theme {
-  @include angular-material-theme($app-dark-theme);
+.mat-app-background {
+  min-height: 200vh;
 }

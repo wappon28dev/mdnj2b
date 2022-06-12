@@ -1,5 +1,35 @@
-* {
-  font-family: "M PLUS 1p", sans-serif;
+@use "@angular/material" as mat;
+
+.main {
+  width: 100%;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.title {
+  padding: 100px;
+  margin: auto;
+  margin-bottom: -60px;
+  text-align: center;
+  background-color: var(--primary-color);
+}
+
+.headline {
+  font-size: 30px;
+  padding-bottom: 30px;
+  color: var(--background-color);
+}
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.card {
+  padding-bottom: 20px;
 }
 
 $itemColors: (
