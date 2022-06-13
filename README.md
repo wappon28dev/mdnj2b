@@ -1,27 +1,34 @@
-# Mdnj2b
+# SMUI SvelteKit Example
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+An example project implementing [Svelte Material UI](https://github.com/hperrin/svelte-material-ui) with [SvelteKit](https://kit.svelte.dev/).
 
-## Development server
+# Get it Running
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Clone the repo.
+2. `npm install`
+3. `npm run dev`
+4. http://localhost:3000
 
-## Code scaffolding
+# A Note About SvelteKit
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+From the SvelteKit website:
 
-## Build
+> SvelteKit is in early development, and some things may change before we hit version 1.0. This document is a work-in-progress. If you get stuck, reach out for help in the [Discord chatroom](https://svelte.dev/chat).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+As such, this repo might break during SvelteKit's development. If it does, please ping me (@SylphWeed) in [the SMUI support Discord channel](https://discord.gg/aFzmkrmg9P).
 
-## Running unit tests
+# License
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Copyright 2021 Hunter Perrin
 
-## Running end-to-end tests
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    http://www.apache.org/licenses/LICENSE-2.0
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
