@@ -8,7 +8,7 @@
     Subtitle,
   } from "@smui/drawer";
   import Button, { Label } from "@smui/button";
-  import List, { Item, Text } from "@smui/list";
+  import List, { Item, Text, Graphic, Separator, Subheader } from "@smui/list";
   import TopAppBar, {
     Row,
     Section,
@@ -43,7 +43,7 @@
   }
 </script>
 
-<TopAppBar bind:this={topAppBar} variant="short">
+<TopAppBar bind:this={topAppBar} variant="standard">
   <Row>
     <Section>
       <IconButton class="material-icons" on:click={() => (open = !open)}
@@ -59,70 +59,86 @@
   </Row>
 </TopAppBar>
 
-<div class="drawer-container">
-  <Drawer variant="modal" fixed={false} bind:open>
+<AutoAdjust {topAppBar} style="display: flex;">
+  <Drawer variant="dismissible" bind:open style="padding: 20px">
     <Header>
-      <DrawerTitle>Super Drawer</DrawerTitle>
+      <Title>Super Drawer</Title>
       <Subtitle>It's the best drawer.</Subtitle>
     </Header>
     <Content>
       <List>
         <Item
           href="javascript:void(0)"
-          on:click={() => setActive("Gray Kittens")}
-          activated={active === "Gray Kittens"}
+          on:click={() => setActive("Inbox")}
+          activated={active === "Inbox"}
         >
-          <Text>Gray Kittens</Text>
+          <Graphic class="material-icons" aria-hidden="true">inbox</Graphic>
+          <Text>Inbox</Text>
         </Item>
         <Item
           href="javascript:void(0)"
-          on:click={() => setActive("A Space Rocket")}
-          activated={active === "A Space Rocket"}
+          on:click={() => setActive("Star")}
+          activated={active === "Star"}
         >
-          <Text>A Space Rocket</Text>
+          <Graphic class="material-icons" aria-hidden="true">star</Graphic>
+          <Text>Star</Text>
         </Item>
         <Item
           href="javascript:void(0)"
-          on:click={() => setActive("100 Pounds of Gravel")}
-          activated={active === "100 Pounds of Gravel"}
+          on:click={() => setActive("Sent Mail")}
+          activated={active === "Sent Mail"}
         >
-          <Text>100 Pounds of Gravel</Text>
+          <Graphic class="material-icons" aria-hidden="true">send</Graphic>
+          <Text>Sent Mail</Text>
         </Item>
         <Item
           href="javascript:void(0)"
-          on:click={() => setActive("All of the Shrimp")}
-          activated={active === "All of the Shrimp"}
+          on:click={() => setActive("Drafts")}
+          activated={active === "Drafts"}
         >
-          <Text>All of the Shrimp</Text>
+          <Graphic class="material-icons" aria-hidden="true">drafts</Graphic>
+          <Text>Drafts</Text>
+        </Item>
+
+        <Separator />
+        <Subheader>Labels</Subheader>
+        <Item
+          href="javascript:void(0)"
+          on:click={() => setActive("Family")}
+          activated={active === "Family"}
+        >
+          <Graphic class="material-icons" aria-hidden="true">bookmark</Graphic>
+          <Text>Family</Text>
         </Item>
         <Item
           href="javascript:void(0)"
-          on:click={() => setActive("A Planet with a Mall")}
-          activated={active === "A Planet with a Mall"}
+          on:click={() => setActive("Friends")}
+          activated={active === "Friends"}
         >
-          <Text>A Planet with a Mall</Text>
+          <Graphic class="material-icons" aria-hidden="true">bookmark</Graphic>
+          <Text>Friends</Text>
+        </Item>
+        <Item
+          href="javascript:void(0)"
+          on:click={() => setActive("Work")}
+          activated={active === "Work"}
+        >
+          <Graphic class="material-icons" aria-hidden="true">bookmark</Graphic>
+          <Text>Work</Text>
         </Item>
       </List>
     </Content>
   </Drawer>
 
-  <AutoAdjust
-    {topAppBar}
-    style="display: flex; justify-content: space-between;"
-  >
-    <AppContent class="app-content">
-      <main class="main-content">
-        <Button on:click={() => (open = !open)}
-          ><Label>Toggle Drawer</Label></Button
-        >
-        <br />
-        <pre class="status">Active: {active}</pre>
-        <p>{open}</p>
-        <slot />
-      </main>
-    </AppContent>
-  </AutoAdjust>
-</div>
+  <AppContent class="app-content" style="padding: 20px;">
+    <Button on:click={() => (open = !open)}>
+      <Label>Toggle Drawer</Label>
+    </Button>
+    <br />
+    <pre class="status">Active: {active}</pre>
+    <slot />
+  </AppContent>
+</AutoAdjust>
 
 <style>
   /* Hide everything above this component. */
@@ -135,25 +151,14 @@
     position: static !important;
   }
 
-  .drawer-container {
-    position: relative;
-    display: flex;
-    height: max-content;
-    max-width: 600px;
-    min-width: max-content;
-    overflow: hidden;
-    z-index: 0;
-  }
   * :global(.app-content) {
+    padding: 20px;
     flex: auto;
     overflow: auto;
     position: relative;
     flex-grow: 1;
   }
-  .main-content {
-    overflow: auto;
-    padding: 16px;
-    height: 100%;
-    box-sizing: border-box;
-  }
+  /* .drawer {
+    margin: 20px;
+  } */
 </style>

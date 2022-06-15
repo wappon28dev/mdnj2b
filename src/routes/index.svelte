@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Select, { Option } from "@smui/select";
 
   import Button, { Label, Icon } from "@smui/button";
 
