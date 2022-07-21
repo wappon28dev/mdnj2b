@@ -11,12 +11,11 @@
   $error: #ba1b1b
 );
 
-@use "./app";
+@use "../app";
 
 html,
 body {
-  font-family: "Mochiy Pop One";
-  background-color: theme.$surface;
+  background-color: theme.$background;
   color: theme.$on-surface;
 }
 
