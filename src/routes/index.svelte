@@ -1,32 +1,36 @@
 <script lang="ts">
-  import Select, { Option } from "@smui/select";
+  import Button, { Icon, Label } from "@smui/button";
+  import { firestoreStatus, isLoading, sampleData } from "$lib/store";
+  import { onMount } from "svelte";
+  import Home from "./_home.svelte";
+  import Trailer from "./_trailer.svelte";
+  import Place from "./_place.svelte";
+  import Rules from "./_rules.svelte";
+  import Etc from "./_etc.svelte";
 
-  import Button, { Label, Icon } from "@smui/button";
+  onMount(() => {
+    isLoading.set(false);
+  });
 
-  let clicked = 0;
-
-  function handleClick(event: CustomEvent | MouseEvent) {
-    event = event as MouseEvent;
-    if (event.button === 0) {
-      clicked++;
-    }
-  }
-
-  function reset() {
-    clicked = 0;
-  }
+  let status = "";
+  firestoreStatus.subscribe((value) => (status = value));
 </script>
 
-<Button on:mousedown={handleClick}>
-  <Icon class="material-icons">thumb_up</Icon>
-  <Label>Click Me</Label>
-</Button>
-<p>
-  {#if clicked}
-    You've clicked the button {clicked} time{clicked === 1 ? "" : "s"}. You can
-    <!-- svelte-ignore a11y-invalid-attribute -->
-    <a on:click={reset} href="javascript:void(0);">reset it</a>.
-  {:else}
-    <span>You haven't clicked the button.</span>
-  {/if}
-</p>
+<div id="home">
+  <Home />
+</div>
+<div id="trailer">
+  <Trailer />
+</div>
+<div id="place">
+  <Place />
+</div>
+<div id="rules">
+  <Rules />
+</div>
+<div id="etc">
+  <Etc />
+</div>
+
+<style>
+</style>

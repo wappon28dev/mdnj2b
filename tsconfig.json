@@ -6,5 +6,5 @@
 			*/
 		"noImplicitAny": true,
 		"strict": true
-	}
+	},
 }

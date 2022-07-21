@@ -2,13 +2,13 @@
 
 @use "@material/theme/color-palette";
 
-// Svelte Colors! (Dark Theme)
+// Svelte Colors!
 @use "@material/theme/index" as theme with (
-  $primary: #78dc77,
-  $secondary: #a1cfd5,
-  $surface: #253423,
-  $background: #253423,
-  $error: #ffb4a9
+  $primary: #006e17,
+  $secondary: #38656a,
+  $surface: #d5e8ce,
+  $background: #d5e8ce,
+  $error: #ba1b1b
 );
 
 @use "../app";
