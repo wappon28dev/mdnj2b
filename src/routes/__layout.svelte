@@ -31,7 +31,12 @@
         Subheader,
     } from "@smui/list";
     import { ThemeManager } from "../theme/theme";
-    import { currentPath, PathId, isLoading } from "$lib/model/store";
+    import {
+        currentPath,
+        PathId,
+        isLoading,
+        isLandscapeSnap,
+    } from "$lib/model/store";
     import { goto } from "$app/navigation";
     import { onMount } from "svelte";
     import PageTransition from "$lib/components/page-transition.svelte";
@@ -39,11 +44,11 @@
     import { isLandscape } from "$lib/model/device";
     import Splash from "$lib/components/splash.svelte";
     import { animateScroll } from "svelte-scrollto-element";
+    import SvelteTypedJs from "svelte-typed-js";
 
     export let pathname = "";
 
     let open = false;
-    let isLandscapeSnap = false;
     let topAppBar: TopAppBarComponentDev;
     let theme = new ThemeManager();
     let isLightModeStr = theme.isLight ? "Dark" : "Light";
@@ -68,7 +73,7 @@
     });
 
     function updateSize(): void {
-        isLandscapeSnap = isLandscape();
+        isLandscapeSnap.set(isLandscape());
         open = isLandscape();
     }
 
@@ -119,11 +124,35 @@
                 variant="modal"
                 bind:open
                 style="padding: 10px;"
-                fixed={isLandscapeSnap}
+                fixed={$isLandscapeSnap}
             >
                 <Header>
-                    <DrawerTitle>ポチポチvsカタカタ</DrawerTitle>
-                    <Subtitle>フリック入力とローマ字入力対決</Subtitle>
+                    <div class="typing-container">
+                        <SvelteTypedJs
+                            strings={["ポチポチ vs カタカタ"]}
+                            loop={false}
+                            startDelay="500"
+                            typeSpeed="9.8"
+                            showCursor={false}
+                        >
+                            <DrawerTitle>
+                                <span class="typing" />
+                            </DrawerTitle>
+                        </SvelteTypedJs>
+                    </div>
+                    <div class="typing-container">
+                        <SvelteTypedJs
+                            strings={["フリック入力とローマ字入力対決"]}
+                            loop={false}
+                            startDelay="700"
+                            typeSpeed="9.8"
+                            showCursor={false}
+                        >
+                            <Subtitle>
+                                <span class="typing" />
+                            </Subtitle>
+                        </SvelteTypedJs>
+                    </div>
                 </Header>
                 {#if isLandscapeSnap}
                     <div class="progress">
@@ -199,7 +228,7 @@
                     きょーゆーするのだ！
                 </div>
             </Drawer>
-            {#if !isLandscapeSnap}
+            {#if !$isLandscapeSnap}
                 <Scrim fixed={false} />
             {/if}
             <AppContent class="app-content">
@@ -249,5 +278,9 @@
         text-align: center;
         color: var(--m3-on-tertiary);
         background-color: var(--m3-tertiary);
+    }
+
+    .typing-container {
+        font-size: medium;
     }
 </style>

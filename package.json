@@ -50,6 +50,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"firebase": "^9.8.4"
+		"firebase": "^9.8.4",
+		"svelte-typed-js": "^1.0.3"
 	}
 }
