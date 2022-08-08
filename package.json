@@ -1,11 +1,11 @@
 {
-	"name": "mdnj2b",
+	"name": "skill-net",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
-		"preview": "svelte-kit preview",
-		"prepare": "svelte-kit sync && npm run smui-theme-light && npm run smui-theme-dark",
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "npm run smui-theme-light && npm run smui-theme-dark",
 		"smui-theme-light": "smui-theme compile static/styles/smui.css -i src/theme/light",
 		"smui-theme-dark": "smui-theme compile static/styles/smui-dark.css -i src/theme/dark",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
@@ -16,9 +16,10 @@
 	"devDependencies": {
 		"@material/theme": "^14.0.0",
 		"@material/typography": "^14.0.0",
-		"@mdi/js": "^6.6.96",
+		"@mdi/js": "^7.0.96",
 		"@smui/button": "^6.0.0-beta.16",
 		"@smui/card": "^6.0.0-beta.16",
+		"@smui/data-table": "^6.0.0",
 		"@smui/dialog": "^6.0.0-beta.16",
 		"@smui/drawer": "^6.0.0-beta.16",
 		"@smui/fab": "^6.0.0-beta.16",
@@ -33,18 +34,22 @@
 		"@smui/top-app-bar": "^6.0.0-beta.16",
 		"@sveltejs/adapter-static": "^1.0.0-next.34",
 		"@sveltejs/kit": "next",
+		"date-fns": "^2.29.1",
+		"date-picker-svelte": "^2.0.0",
 		"prettier": "^2.7.0",
 		"prettier-plugin-svelte": "^2.7.0",
 		"smui-theme": "^6.0.0-beta.16",
 		"svelte": "^3.49.0",
 		"svelte-check": "^2.6.0",
 		"svelte-preprocess": "^4.10.7",
+		"svelte-scrollto-element": "^0.7.0",
 		"tslib": "^2.3.1",
-		"typescript": "^4.6.3"
+		"typescript": "^4.6.3",
+		"vite": "^3.0.2",
+		"vitest-github-actions-reporter": "^0.8.1"
 	},
 	"type": "module",
 	"dependencies": {
-		"firebase": "^9.8.4",
-		"svelte-scrollto-element": "^0.7.0"
+		"firebase": "^9.8.4"
 	}
 }

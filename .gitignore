@@ -2,9 +2,13 @@
 node_modules
 /build
 /.svelte-kit
+/public
 /package
 .env
 .env.*
 !.env.example
-.vercel_build_output
-public
+.vercel
+
+# Local Netlify folder
+.netlify
+/static/styles/smui*.css
