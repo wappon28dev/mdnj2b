@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { isLoading } from "$lib/model/store";
+  import { onMount } from "svelte";
 </script>
 
 <div class="main">

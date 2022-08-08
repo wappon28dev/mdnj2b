@@ -4,24 +4,29 @@
 
 // Svelte Colors!
 @use "@material/theme/index" as theme with (
-  $primary: #006e17,
-  $secondary: #38656a,
-  $surface: #d5e8ce,
-  $background: #d5e8ce,
-  $error: #ba1b1b
+    $primary: #006e17,
+    $secondary: #38656a,
+    $surface: #d5e8ce,
+    $background: #d5e8ce,
+    $error: #ba1b1b
 );
 
 @use "../app";
 
 html,
 body {
-  background-color: theme.$background;
-  color: theme.$on-surface;
+    background-color: theme.$background;
+    color: theme.$on-surface;
 }
 
 a {
-  color: #40b3ff;
+    color: #40b3ff;
 }
 a:visited {
-  color: color.scale(#40b3ff, $lightness: -35%);
+    color: color.scale(#40b3ff, $lightness: -35%);
+}
+
+.qrcode {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+        brightness(102%) contrast(102%);
 }
