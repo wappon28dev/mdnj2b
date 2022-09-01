@@ -7,11 +7,11 @@
         sampleData,
     } from "$lib/model/store";
     import { onMount } from "svelte";
-    import Home from "./_home.svelte";
-    import Trailer from "./_trailer.svelte";
-    import Place from "./_place.svelte";
-    import Rules from "./_rules.svelte";
-    import Etc from "./_etc.svelte";
+    import Home from "./contents/_home.svelte";
+    import Trailer from "./contents/_trailer.svelte";
+    import Place from "./contents/_place.svelte";
+    import Rules from "./contents/_rules.svelte";
+    import Etc from "./contents/_etc.svelte";
     import { animateScroll } from "svelte-scrollto-element";
     import { isLandscape } from "$lib/model/device";
 
