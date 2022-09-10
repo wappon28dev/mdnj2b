@@ -9,7 +9,6 @@ import {
     query,
     Timestamp,
 } from "firebase/firestore";
-import { recruitDataSnap, recruitIdSnap } from "$lib/model/store";
 
 const recruit = "recruit";
 

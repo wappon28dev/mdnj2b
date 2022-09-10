@@ -16,74 +16,58 @@
         Subtitle,
         Scrim,
     } from "@smui/drawer";
-    import List, {
-        Item,
-        Text,
-        Graphic,
-        Separator,
-        Subheader,
-    } from "@smui/list";
+    import List, { Item, Text, Graphic } from "@smui/list";
     import { ThemeManager } from "../theme/theme";
     import {
         currentPath,
-        PathId,
         isLoading,
-        isLandscapeSnap,
+        isDrawerOpened,
+        isLightTheme,
     } from "$lib/model/store";
     import { goto } from "$app/navigation";
     import { onMount } from "svelte";
     import PageTransition from "$lib/components/page-transition.svelte";
     import LinearProgress from "@smui/linear-progress";
-    import { isLandscape } from "$lib/model/device";
     import Splash from "$lib/components/splash.svelte";
-    import { animateScroll } from "svelte-scrollto-element";
     import SvelteTypedJs from "svelte-typed-js";
     import type { PageData } from "./$types";
+    import { PathId } from "$lib/model/constant";
+    import { LandScapeDetecter } from "$lib/model/landscape";
 
     export let data: PageData;
 
-    let open = false;
+    let isLandscapeSnap = false;
     let topAppBar: TopAppBarComponentDev;
-    let theme = new ThemeManager();
-    let isLightModeStr = theme.isLight ? "Dark" : "Light";
     let hasAppMounted = false;
 
     onMount(async () => {
+        let path = new URL(location.href).pathname;
+
         hasAppMounted = true;
         updateSize();
 
-        const param = new URL(location.href).searchParams.toString();
-
-        if (param !== "") {
-            const page = param.replace("p=", "");
-            await new Promise((resolve) => setTimeout(resolve, 100));
-            setActive(page);
-        } else {
-            currentPath.set(PathId.HOME);
-        }
+        currentPath.set(path);
+        console.log(path);
+        ThemeManager.init();
 
         // callback windows width event
         window.addEventListener("resize", updateSize);
     });
 
+    // eslint-disable-next-line no-inner-declarations
     function updateSize(): void {
-        isLandscapeSnap.set(isLandscape());
-        open = isLandscape();
+        isLandscapeSnap = LandScapeDetecter.isLandscape();
+        $isDrawerOpened = LandScapeDetecter.isLandscape();
     }
 
-    async function setActive(route: string) {
-        // isLoading.set(true);
-        currentPath.set(route);
-
-        animateScroll.scrollTo({
-            element: `#${route}` as unknown as HTMLElement,
-            offset: -65,
-        });
-
-        open = !isLandscape() ? false : true;
-        // await new Promise((resolve) => setTimeout(resolve, 1500)); // for debugging
-
-        goto(route == PathId.HOME ? "/" : ` ?p=${route}`);
+    // eslint-disable-next-line no-inner-declarations
+    async function runTransition(route: string) {
+        $isDrawerOpened = isLandscapeSnap;
+        if (route !== $currentPath && !$isLoading) {
+            isLoading.set(true);
+            currentPath.set(route);
+            void goto(route);
+        }
     }
 </script>
 
@@ -93,13 +77,14 @@
             <Section>
                 <IconButton
                     class="material-icons"
-                    on:click={() => (open = !open)}>menu</IconButton
+                    on:click={() => ($isDrawerOpened = !$isDrawerOpened)}
+                    >menu</IconButton
                 >
                 <Title>mdnj2b</Title>
             </Section>
             <Section align="end" toolbar>
-                <Button on:click={theme.toggleTheme}>
-                    <Label>{isLightModeStr}</Label>
+                <Button on:click={ThemeManager.toggleTheme}>
+                    <Label>{$isLightTheme ? "Dark" : "Light"}</Label>
                 </Button>
             </Section>
         </Row>
@@ -116,9 +101,9 @@
         <div class="drawer-container">
             <Drawer
                 variant="modal"
-                bind:open
+                bind:open={$isDrawerOpened}
                 style="padding: 10px;"
-                fixed={$isLandscapeSnap}
+                fixed={isLandscapeSnap}
             >
                 <Header>
                     <div class="typing-container">
@@ -163,7 +148,7 @@
                     <List>
                         <Item
                             href="javascript:void(0)"
-                            on:click={() => setActive(PathId.HOME)}
+                            on:click={() => runTransition(PathId.HOME)}
                             activated={$currentPath == PathId.HOME}
                         >
                             <Graphic class="material-icons" aria-hidden="true"
@@ -173,7 +158,7 @@
                         </Item>
                         <Item
                             href="javascript:void(0)"
-                            on:click={() => setActive(PathId.TRAILER)}
+                            on:click={() => runTransition(PathId.TRAILER)}
                             activated={$currentPath == PathId.TRAILER}
                         >
                             <Graphic class="material-icons" aria-hidden="true"
@@ -183,7 +168,7 @@
                         </Item>
                         <Item
                             href="javascript:void(0)"
-                            on:click={() => setActive(PathId.PLACE)}
+                            on:click={() => runTransition(PathId.PLACE)}
                             activated={$currentPath == PathId.PLACE}
                         >
                             <Graphic class="material-icons" aria-hidden="true"
@@ -193,24 +178,13 @@
                         </Item>
                         <Item
                             href="javascript:void(0)"
-                            on:click={() => setActive(PathId.RULES)}
-                            activated={$currentPath == PathId.RULES}
-                        >
-                            <Graphic
-                                class="material-icons-outlined"
-                                aria-hidden="true">fact_check</Graphic
-                            >
-                            <Text>ルール</Text>
-                        </Item>
-                        <Item
-                            href="javascript:void(0)"
-                            on:click={() => setActive(PathId.ETC)}
-                            activated={$currentPath == PathId.ETC}
+                            on:click={() => runTransition(PathId.RANKING)}
+                            activated={$currentPath == PathId.RANKING}
                         >
                             <Graphic class="material-icons" aria-hidden="true"
-                                >more_horiz</Graphic
+                                >assessment</Graphic
                             >
-                            <Text>その他</Text>
+                            <Text>リアルタイム順位表</Text>
                         </Item>
                     </List>
                 </Content>
@@ -222,14 +196,14 @@
                     きょーゆーするのだ！
                 </div>
             </Drawer>
-            {#if !$isLandscapeSnap}
+            {#if !isLandscapeSnap}
                 <Scrim fixed={false} />
             {/if}
             <AppContent class="app-content">
                 <main class="main-content">
-                    <!-- <PageTransition {data}> -->
-                    <slot />
-                    <!-- </PageTransition> -->
+                    <PageTransition {data}>
+                        <slot />
+                    </PageTransition>
                 </main>
             </AppContent>
         </div>
@@ -259,11 +233,11 @@
         margin-top: -5.5px;
         min-height: 4px;
     }
-    /* .drawer-container {
+    .drawer-container {
         position: relative;
         display: flex;
         height: calc(var(--vh, 1vh) * 90);
-    } */
+    }
 
     .share {
         padding: 20px;

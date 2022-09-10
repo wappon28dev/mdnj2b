@@ -1,10 +1,6 @@
 <script>
     import Button, { Icon, Label } from "@smui/button";
-    import {
-        isLandscapeSnap,
-        firestoreStatus,
-        isLoading,
-    } from "$lib/model/store";
+    import { isLoading } from "$lib/model/store";
     import { onMount } from "svelte";
     import SvelteTypedJs from "svelte-typed-js";
 
@@ -13,7 +9,6 @@
     });
 
     let status = "";
-    firestoreStatus.subscribe((value) => (status = value));
 </script>
 
 <div class="wide_title">

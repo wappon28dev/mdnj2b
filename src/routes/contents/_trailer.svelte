@@ -1,6 +1,6 @@
 <script lang="ts">
     import Button, { Icon, Label } from "@smui/button";
-    import { firestoreStatus, isLoading, sampleData } from "$lib/model/store";
+    import { isLoading } from "$lib/model/store";
     import { onMount } from "svelte";
 
     onMount(() => {
@@ -12,7 +12,7 @@
     <p>トレーラー</p>
 </div>
 <div class="main">
-    {#each Array(10) as _unused, i}
+    {#each Array(10) as _}
         <p>どーしよ</p>
     {/each}
 </div>
