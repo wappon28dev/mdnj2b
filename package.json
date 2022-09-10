@@ -5,7 +5,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"prepare": "npm run smui-theme-light && npm run smui-theme-dark",
+		"prepare": "bun run smui-theme-light && bun run smui-theme-dark",
 		"smui-theme-light": "smui-theme compile static/styles/smui.css -i src/theme/light",
 		"smui-theme-dark": "smui-theme compile static/styles/smui-dark.css -i src/theme/dark",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
