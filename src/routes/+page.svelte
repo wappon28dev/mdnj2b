@@ -16,15 +16,6 @@
 <div id="home">
     <Home />
 </div>
-<div id="trailer">
-    <Trailer />
-</div>
-<div id="place">
-    <Place />
-</div>
-<div id="etc">
-    <Etc />
-</div>
 
 <style>
 </style>

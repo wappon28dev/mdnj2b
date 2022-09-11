@@ -106,6 +106,16 @@
                 fixed={isLandscapeSnap}
             >
                 <Header>
+                    <img
+                        src="img/logo/icon.png"
+                        alt="logo"
+                        width="150"
+                        style="
+                            padding-top:20px;
+                            display: block;
+                            margin-left: auto;
+                            margin-right: auto"
+                    />
                     <div class="typing-container">
                         <SvelteTypedJs
                             strings={["ポチポチ vs カタカタ"]}
@@ -168,16 +178,6 @@
                         </Item>
                         <Item
                             href="javascript:void(0)"
-                            on:click={() => runTransition(PathId.PLACE)}
-                            activated={$currentPath == PathId.PLACE}
-                        >
-                            <Graphic class="material-icons" aria-hidden="true"
-                                >place</Graphic
-                            >
-                            <Text>場所</Text>
-                        </Item>
-                        <Item
-                            href="javascript:void(0)"
                             on:click={() => runTransition(PathId.RANKING)}
                             activated={$currentPath == PathId.RANKING}
                         >
@@ -195,16 +195,17 @@
                     周りの子に<br />
                     きょーゆーするのだ！
                 </div>
+                {#if isLandscapeSnap}
+                    <div class="bottom-space" style="padding-bottom: 65px; " />
+                {/if}
             </Drawer>
             {#if !isLandscapeSnap}
                 <Scrim fixed={false} />
             {/if}
             <AppContent class="app-content">
-                <main class="main-content">
-                    <PageTransition {data}>
-                        <slot />
-                    </PageTransition>
-                </main>
+                <PageTransition {data}>
+                    <slot />
+                </PageTransition>
             </AppContent>
         </div>
     </AutoAdjust>
@@ -216,13 +217,9 @@
     * :global(.app-content) {
         flex: auto;
         overflow: auto;
+        overflow-x: hidden;
         position: relative;
         flex-grow: 1;
-    }
-
-    .main-content {
-        overflow: auto;
-        box-sizing: border-box;
     }
 
     .progress {
@@ -236,12 +233,11 @@
     .drawer-container {
         position: relative;
         display: flex;
-        height: calc(var(--vh, 1vh) * 90);
+        height: 91vh;
     }
 
     .share {
         padding: 20px;
-        margin-bottom: 65px;
         border-radius: 10px;
         text-align: center;
         color: var(--m3-on-tertiary);

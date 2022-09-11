@@ -7,13 +7,16 @@
 
     onMount(
         () =>
-            (animations = !window.matchMedia("(prefers-reduced-motion: reduce)")
-                .matches)
+            (animations =
+                window.matchMedia(`(prefers-reduced-motion: reduce)`)
+                    .matches === true ||
+                window.matchMedia(`(prefers-reduced-motion: reduce)`)
+                    .matches !== true),
     );
 </script>
 
 {#key data}
-    {#if animations}
+    {#if !!animations}
         <div
             in:fly={{ y: -5, duration: 250, delay: 300 }}
             out:fly={{ y: 5, duration: 250 }}
