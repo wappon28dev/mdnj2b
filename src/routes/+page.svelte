@@ -13,6 +13,10 @@
     });
 </script>
 
+<svelte:head>
+    <title>ポチポチvsカタカタ - mdnj2b</title>
+</svelte:head>
+
 <div id="home">
     <Home />
 </div>
