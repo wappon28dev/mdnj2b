@@ -41,7 +41,7 @@
             loop
             preload="metadata"
             playsinline
-            src="http://watapondata2.starfree.jp/mdnj2b-assets/keyvisual.mp4"
+            src="https://roto-server.f5.si/mdnj2b/key-visual.mp4"
         />
     </div>
     <div class="item description">
