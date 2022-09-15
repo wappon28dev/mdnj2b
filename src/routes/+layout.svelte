@@ -33,6 +33,7 @@
     import type { PageData } from "./$types";
     import { PathId } from "$lib/model/constant";
     import { LandScapeDetecter } from "$lib/model/landscape";
+    import { getData } from "$lib/firebase/db_repository";
 
     export let data: PageData;
 
@@ -45,6 +46,8 @@
 
         hasAppMounted = true;
         updateSize();
+
+        // getData();
 
         currentPath.set(path);
         console.log(path);

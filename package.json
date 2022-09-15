@@ -19,7 +19,7 @@
     "@mdi/js": "^7.0.96",
     "@smui/button": "^6.0.0-beta.16",
     "@smui/card": "^6.0.0-beta.16",
-    "@smui/data-table": "^6.0.0",
+    "@smui/data-table": "^6.1.0",
     "@smui/dialog": "^6.0.0-beta.16",
     "@smui/drawer": "^6.0.0-beta.16",
     "@smui/fab": "^6.0.0-beta.16",

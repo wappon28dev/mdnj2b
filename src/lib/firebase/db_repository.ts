@@ -1,81 +1,40 @@
-import { db } from "./client";
+import { currentScoreData } from "$lib/model/store";
 import {
-    addDoc,
     collection,
-    deleteDoc,
-    doc,
-    getDoc,
-    getDocs,
     query,
-    Timestamp,
+    onSnapshot,
+    getDocs,
+    orderBy,
 } from "firebase/firestore";
+import { db } from "./client";
 
-const recruit = "recruit";
-
-async function getStatus() {
-    type StatusData = {
-        statusStr: string;
-    };
-
-    const docRef = doc(db, "status", "status");
-    const docSnap = await getDoc(docRef);
-    const status = docSnap.data() as StatusData;
-    console.log(status);
-    return status;
-}
-type RecruitData = {
-    title: string;
-    thumbnail: string;
-    media1: string;
-    media2: string;
-    media3: string;
-    media4: string;
-    media5: string;
-    place: string;
-    deadline: Timestamp;
-    beginTime: Timestamp;
-    endTime: Timestamp;
-    author: string;
-    recruitmentNum: number;
-    recruitStatus: string;
-    requirements: string;
-    detail: string;
+export type ScoreData = {
+    charId: number;
+    classId: string;
+    isKata: boolean;
+    nickname: string;
+    score: number;
 };
 
-async function getRecruitData(): Promise<void> {
-    const q = query(collection(db, recruit));
-    const querySnapshot = await getDocs(q);
-    const docData: RecruitData[] = [];
-    const docId: string[] = [];
+const q = query(collection(db, "data"), orderBy("score", "desc"));
+
+onSnapshot(q, (querySnapshot) => {
+    const scoreData: ScoreData[] = [];
     querySnapshot.forEach((doc) => {
-        docData.push(doc.data() as RecruitData);
-        docId.push(doc.id);
+        scoreData.push(doc.data() as ScoreData);
     });
-    console.log(docData);
-    console.log(docId);
-    recruitDataSnap.set(docData);
-    recruitIdSnap.set(docId);
+    currentScoreData.set(scoreData);
+    console.log("updated received! => ", scoreData);
+});
+
+async function getData() {
+    const querySnapshot = await getDocs(q);
+    const scoreData: ScoreData[] = [];
+    querySnapshot.forEach((doc) => {
+        scoreData.push(doc.data() as ScoreData);
+    });
+    currentScoreData.set(scoreData);
+    console.log("callable data received! => ", scoreData);
 }
 
-async function addRecruitData(data: RecruitData) {
-    try {
-        const docRef = collection(db, "recruit");
-        await addDoc(docRef, data);
-        console.log("Document written with ID: ", docRef.id);
-    } catch (e) {
-        console.error("Error adding document: ", e);
-    }
-    getRecruitData();
-}
-
-async function deleteRecruitData(docId: string) {
-    if (docId != "sample") {
-        await deleteDoc(doc(db, recruit, docId));
-    } else {
-        console.log("no!");
-    }
-    getRecruitData();
-}
-
-export { getStatus, getRecruitData, addRecruitData, deleteRecruitData };
-export type { RecruitData };
+export { getData };
