@@ -3,6 +3,7 @@
         "firestore",
         "Firestore",
         "Kata",
+        "keyof",
         "loscrackitos",
         "mdnj",
         "Mochiy",
@@ -15,6 +16,7 @@
         "sveltejs",
         "sveltekit",
         "textfield",
-        "truetype"
+        "truetype",
+        "typeof"
     ]
 }

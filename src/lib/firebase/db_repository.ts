@@ -1,4 +1,4 @@
-import { currentScoreData } from "$lib/model/store";
+import { currentScoreData, isLoading } from "$lib/model/store";
 import {
     collection,
     query,
@@ -9,6 +9,7 @@ import {
 import { db } from "./client";
 
 export type ScoreData = {
+    rank: number;
     charId: number;
     classId: string;
     isKata: boolean;
@@ -18,23 +19,46 @@ export type ScoreData = {
 
 const q = query(collection(db, "data"), orderBy("score", "desc"));
 
-onSnapshot(q, (querySnapshot) => {
-    const scoreData: ScoreData[] = [];
-    querySnapshot.forEach((doc) => {
-        scoreData.push(doc.data() as ScoreData);
+const getSnapshot = () =>
+    onSnapshot(q, (querySnapshot) => {
+        const scoreData: ScoreData[] = [];
+
+        let rank = 1;
+        querySnapshot.forEach((doc) => {
+            scoreData.push({
+                rank: rank,
+                charId: doc.data().charId,
+                classId: doc.data().classId,
+                isKata: doc.data().isKata,
+                nickname: doc.data().nickname,
+                score: doc.data().score,
+            } as ScoreData);
+            rank++;
+        });
+        currentScoreData.set(scoreData);
+        console.log("updated received! => ", scoreData);
+        isLoading.set(false);
     });
-    currentScoreData.set(scoreData);
-    console.log("updated received! => ", scoreData);
-});
 
 async function getData() {
     const querySnapshot = await getDocs(q);
     const scoreData: ScoreData[] = [];
+
+    let rank = 1;
     querySnapshot.forEach((doc) => {
-        scoreData.push(doc.data() as ScoreData);
+        scoreData.push({
+            rank: rank,
+            charId: doc.data().charId,
+            classId: doc.data().classId,
+            isKata: doc.data().isKata,
+            nickname: doc.data().nickname,
+            score: doc.data().score,
+        } as ScoreData);
+        rank++;
     });
+
     currentScoreData.set(scoreData);
     console.log("callable data received! => ", scoreData);
 }
 
-export { getData };
+export { getSnapshot, getData };

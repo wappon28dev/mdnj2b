@@ -1,43 +1,43 @@
-h4 {
-  color: var(--m3-on-primary-container);
-}
 .mdc-drawer__subtitle {
-  font-size: 13px;
+    font-size: 13px;
 }
 
-.wide_title {
-  padding: 1px;
-  font-size: 30px;
-  color: var(--m3-on-primary-container);
-  text-align: center;
-  background-color: var(--m3-inverse-primary);
+.wide-title {
+    padding: 1px;
+    font-size: 30px;
+    color: var(--m3-on-primary-container);
+    text-align: center;
+    background-color: var(--m3-inverse-primary);
+}
+.wide-title.h4 {
+    color: var(--m3-on-primary-container);
 }
 
 .main {
-  padding: 16px;
-  text-align: center;
+    padding: 16px;
+    text-align: center;
 }
 
 .mdc-drawer {
-  background-color: var(--m3-back);
+    background-color: var(--m3-back);
 }
 
 .mdc-drawer--modal + .mdc-drawer-scrim {
-  background-color: rgba(0, 0, 0, 0.32);
+    background-color: rgba(0, 0, 0, 0.32);
 }
 
 .mdc-dialog .mdc-dialog__scrim {
-  background-color: rgba(0, 0, 0, 0.32);
+    background-color: rgba(0, 0, 0, 0.32);
 }
 
 .mdc-dialog .mdc-dialog__surface {
-  background-color: var(--m3-back);
+    background-color: var(--m3-back);
 }
 
 .mdc-drawer--modal {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 .mdc-text-field__input {
-  margin-left: 10px;
+    margin-left: 10px;
 }

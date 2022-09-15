@@ -3,9 +3,6 @@
     import { currentPath, isLoading } from "$lib/model/store";
     import { onMount } from "svelte";
     import Home from "./contents/_home.svelte";
-    import Trailer from "./contents/_trailer.svelte";
-    import Place from "./contents/_place.svelte";
-    import Etc from "./contents/_etc.svelte";
     import { animateScroll } from "svelte-scrollto-element";
 
     onMount(() => {

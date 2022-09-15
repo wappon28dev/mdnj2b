@@ -3,13 +3,56 @@
     import { onMount } from "svelte";
     import SvelteTypedJs from "svelte-typed-js";
     import LayoutGrid, { Cell } from "@smui/layout-grid";
+    import Fab, { Label, Icon } from "@smui/fab";
 
     onMount(async () => {
         isLoading.set(false);
     });
+
+    function share() {
+        const image = new Image();
+        image.onload = () => {
+            context.drawImage(image, 0, 0);
+        };
+        image.src = "/img/home/share.png";
+        const canvas = document.getElementById("canvas");
+        const dataURL = canvas.toDataURL("image/png");
+        const toBlob = (base64) => {
+            const decodedData = atob(base64.replace(/^.*,/, ""));
+            const buffers = new Uint8Array(decodedData.length);
+            for (let i = 0; i < decodedData.length; i++) {
+                buffers[i] = decodedData.charCodeAt(i);
+            }
+            try {
+                const blob = new Blob([buffers.buffer], {
+                    type: "image/png",
+                });
+                return blob;
+            } catch (e) {
+                return null;
+            }
+        };
+
+        const blob = toBlob(dataURL);
+        const imageFile = new File([blob], "image.png", {
+            type: "image/png",
+        });
+        navigator
+            .share({
+                text: "フリック入力とローマ字入力対決: ポチポチvsカタカタ - 4F/409/J2B",
+                url: "https://mdnj2b.vercel.app",
+                files: [imageFile],
+            })
+            .then(() => {
+                console.log("共有成功.");
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
 </script>
 
-<div class="wide_title">
+<div class="wide-title">
     <div class="grid title">
         <div class="item">
             <div class="title-container">
@@ -46,7 +89,7 @@
     </div>
     <div class="item description">
         <p>
-            そこの諸君.　ああキミのことだ.<br /><br />
+            そこの諸君.&emsp;ああキミのことだ.<br /><br />
             キミは文章を打つときに “ポチポチ”するか？<br />
             それとも “カタカタ”するか？<br />
             人によって違いが出てくるだろう.<br />
@@ -75,23 +118,34 @@
     </div>
 </div>
 <br /><br /><br />
-<div class="wide_title">
+<div class="wide-title">
     <p> どこへ征けば？ </p>
 </div>
-<div class="main">
+<div class="place">
     <p>
-        4Fだっ<br />
-        4Fだっ<br />
-        4Fだっ<br />
-        4Fだっ<br />
-        4Fだっ<br />
+        4階の409教室に, 闘いアリ.<br />
+        熱き志を持てば, 必然とたどり着けるだろう...
     </p>
 </div>
 
-<div class="wide_title">
+<div class="wide-title">
     <p> 周りの子に共有するのだ！ </p>
 </div>
-<div class="main"> 4Fだっ </div>
+<div class="grid">
+    <div class="item image share-container">
+        <img src="img/home/share.png" alt="logo" />
+    </div>
+    <div class="share-container">
+        <p> ボタンをタップして, 共有しよう！ </p>
+        <div class="fab-container">
+            <Fab on:click={share} extended>
+                <Icon class="material-icons">share</Icon>
+                <Label>共有する！</Label>
+            </Fab>
+        </div>
+    </div>
+</div>
+<canvas id="canvas" width="0" height="0" />
 
 <style lang="scss">
     .typing-container {
@@ -172,6 +226,33 @@
             p {
                 line-height: 1.7;
             }
+        }
+    }
+
+    .place {
+        p {
+            text-align: center;
+            padding: 20px 0;
+            line-height: 1.7;
+            font-size: x-large;
+        }
+    }
+
+    .share-container {
+        padding: 30px;
+        img {
+            width: 300px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            text-align: center;
+            padding: 20px 0;
+            line-height: 1.7;
+            font-size: x-large;
+        }
+
+        .fab-container {
+            text-align: center;
         }
     }
 </style>

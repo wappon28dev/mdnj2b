@@ -54,6 +54,8 @@
   },
   "type": "module",
   "dependencies": {
+    "@smui/tab": "^6.1.0",
+    "@smui/tab-bar": "^6.1.0",
     "@typescript-eslint/parser": "^5.37.0",
     "firebase": "^9.8.4",
     "svelte-typed-js": "^1.0.3"

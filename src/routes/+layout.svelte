@@ -23,6 +23,7 @@
         isLoading,
         isDrawerOpened,
         isLightTheme,
+        isLandscape,
     } from "$lib/model/store";
     import { goto } from "$app/navigation";
     import { onMount } from "svelte";
@@ -33,11 +34,9 @@
     import type { PageData } from "./$types";
     import { PathId } from "$lib/model/constant";
     import { LandScapeDetecter } from "$lib/model/landscape";
-    import { getData } from "$lib/firebase/db_repository";
 
     export let data: PageData;
 
-    let isLandscapeSnap = false;
     let topAppBar: TopAppBarComponentDev;
     let hasAppMounted = false;
 
@@ -46,8 +45,6 @@
 
         hasAppMounted = true;
         updateSize();
-
-        // getData();
 
         currentPath.set(path);
         console.log(path);
@@ -59,13 +56,13 @@
 
     // eslint-disable-next-line no-inner-declarations
     function updateSize(): void {
-        isLandscapeSnap = LandScapeDetecter.isLandscape();
+        $isLandscape = LandScapeDetecter.isLandscape();
         $isDrawerOpened = LandScapeDetecter.isLandscape();
     }
 
     // eslint-disable-next-line no-inner-declarations
     async function runTransition(route: string) {
-        $isDrawerOpened = isLandscapeSnap;
+        $isDrawerOpened = $isLandscape;
         if (route !== $currentPath && !$isLoading) {
             isLoading.set(true);
             currentPath.set(route);
@@ -91,7 +88,7 @@
                 </Button>
             </Section>
         </Row>
-        {#if !isLandscapeSnap}
+        {#if !$isLandscape}
             <div class="progress-mobile">
                 {#if $isLoading}
                     <LinearProgress class="progress-bar-mobile" indeterminate />
@@ -106,7 +103,7 @@
                 variant="modal"
                 bind:open={$isDrawerOpened}
                 style="padding: 10px;"
-                fixed={isLandscapeSnap}
+                fixed={$isLandscape}
             >
                 <Header>
                     <img
@@ -146,7 +143,7 @@
                         </SvelteTypedJs>
                     </div>
                 </Header>
-                {#if isLandscapeSnap}
+                {#if $isLandscape}
                     <div class="progress">
                         {#if $isLoading}
                             <LinearProgress
@@ -198,11 +195,11 @@
                     周りの子に<br />
                     きょーゆーするのだ！
                 </div>
-                {#if isLandscapeSnap}
+                {#if $isLandscape}
                     <div class="bottom-space" style="padding-bottom: 65px; " />
                 {/if}
             </Drawer>
-            {#if !isLandscapeSnap}
+            {#if !$isLandscape}
                 <Scrim fixed={false} />
             {/if}
             <AppContent class="app-content">
