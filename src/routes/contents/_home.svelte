@@ -9,39 +9,20 @@
         isLoading.set(false);
     });
 
-    function share() {
-        const image = new Image();
-        image.onload = () => {
-            context.drawImage(image, 0, 0);
-        };
-        image.src = "/img/home/share.png";
-        const canvas = document.getElementById("canvas");
-        const dataURL = canvas.toDataURL("image/png");
-        const toBlob = (base64) => {
-            const decodedData = atob(base64.replace(/^.*,/, ""));
-            const buffers = new Uint8Array(decodedData.length);
-            for (let i = 0; i < decodedData.length; i++) {
-                buffers[i] = decodedData.charCodeAt(i);
-            }
-            try {
-                const blob = new Blob([buffers.buffer], {
-                    type: "image/png",
-                });
-                return blob;
-            } catch (e) {
-                return null;
-            }
-        };
-
-        const blob = toBlob(dataURL);
-        const imageFile = new File([blob], "image.png", {
-            type: "image/png",
-        });
+    async function share() {
+        const response = await fetch("img/home/share.png");
+        const blob = await response.blob();
+        const filesArray = [
+            new File([blob], "share.png", {
+                type: "image/jpeg",
+                lastModified: new Date().getTime(),
+            }),
+        ];
         navigator
             .share({
                 text: "フリック入力とローマ字入力対決: ポチポチvsカタカタ - 4F/409/J2B",
                 url: "https://mdnj2b.vercel.app",
-                files: [imageFile],
+                files: filesArray,
             })
             .then(() => {
                 console.log("共有成功.");
