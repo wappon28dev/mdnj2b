@@ -1,0 +1,1330 @@
+[
+    {
+        "rank": 1,
+        "charId": 10,
+        "classId": "T1A",
+        "isKata": true,
+        "nickname": "そら",
+        "score": 200
+    },
+    {
+        "rank": 2,
+        "charId": 14,
+        "classId": "J2B",
+        "isKata": true,
+        "nickname": "キッコロ",
+        "score": 197
+    },
+    {
+        "rank": 3,
+        "charId": 29,
+        "classId": "G2B",
+        "isKata": false,
+        "nickname": "りん",
+        "score": 192
+    },
+    {
+        "rank": 4,
+        "charId": 39,
+        "classId": "G1A",
+        "isKata": true,
+        "nickname": "ゆき",
+        "score": 182
+    },
+    {
+        "rank": 5,
+        "charId": 16,
+        "classId": "G2A",
+        "isKata": false,
+        "nickname": "ラビ",
+        "score": 181
+    },
+    {
+        "rank": 6,
+        "charId": 16,
+        "classId": "G2A",
+        "isKata": false,
+        "nickname": "ラビ",
+        "score": 172
+    },
+    {
+        "rank": 7,
+        "charId": 30,
+        "classId": "G2I",
+        "isKata": false,
+        "nickname": "りせ",
+        "score": 163
+    },
+    {
+        "rank": 8,
+        "charId": 15,
+        "classId": "T1A",
+        "isKata": false,
+        "nickname": "たんけっきー",
+        "score": 152
+    },
+    {
+        "rank": 9,
+        "charId": 2,
+        "classId": "J2B",
+        "isKata": false,
+        "nickname": "ポコポコ",
+        "score": 151
+    },
+    {
+        "rank": 10,
+        "charId": 10,
+        "classId": "T1A",
+        "isKata": true,
+        "nickname": "そら",
+        "score": 149
+    },
+    {
+        "rank": 11,
+        "charId": 2,
+        "classId": "J2B",
+        "isKata": false,
+        "nickname": "ポコポコ",
+        "score": 145
+    },
+    {
+        "rank": 12,
+        "charId": 21,
+        "classId": "J2B",
+        "isKata": false,
+        "nickname": "長野颯太朗",
+        "score": 141
+    },
+    {
+        "rank": 13,
+        "charId": 13,
+        "classId": "T2B",
+        "isKata": false,
+        "nickname": "りーちゃん",
+        "score": 139
+    },
+    {
+        "rank": 14,
+        "charId": 20,
+        "classId": "J1A",
+        "isKata": true,
+        "nickname": "かなた",
+        "score": 136
+    },
+    {
+        "rank": 15,
+        "charId": 31,
+        "classId": "J3A",
+        "isKata": false,
+        "nickname": "アデリーペンギン",
+        "score": 136
+    },
+    {
+        "rank": 16,
+        "charId": 15,
+        "classId": "T1A",
+        "isKata": false,
+        "nickname": "たんけっきー",
+        "score": 136
+    },
+    {
+        "rank": 17,
+        "charId": 24,
+        "classId": "G2A",
+        "isKata": false,
+        "nickname": "いとう",
+        "score": 136
+    },
+    {
+        "rank": 18,
+        "charId": 33,
+        "classId": "T1B",
+        "isKata": false,
+        "nickname": "しどう",
+        "score": 134
+    },
+    {
+        "rank": 19,
+        "charId": 30,
+        "classId": "J2A",
+        "isKata": false,
+        "nickname": "はる",
+        "score": 134
+    },
+    {
+        "rank": 20,
+        "charId": 10,
+        "classId": "J2B",
+        "isKata": false,
+        "nickname": "美味しい牛乳",
+        "score": 132
+    },
+    {
+        "rank": 21,
+        "charId": 2,
+        "classId": "J2B",
+        "isKata": true,
+        "nickname": "ポコポコ",
+        "score": 130
+    },
+    {
+        "rank": 22,
+        "charId": 19,
+        "classId": "J2B",
+        "isKata": false,
+        "nickname": "トマトイーター",
+        "score": 128
+    },
+    {
+        "rank": 23,
+        "charId": 4,
+        "classId": "T2B",
+        "isKata": false,
+        "nickname": "いとう",
+        "score": 127
+    },
+    {
+        "rank": 24,
+        "charId": 13,
+        "classId": "T3A",
+        "isKata": false,
+        "nickname": "すぎ",
+        "score": 127
+    },
+    {
+        "rank": 25,
+        "charId": 31,
+        "classId": "T3A",
+        "isKata": false,
+        "nickname": "はると",
+        "score": 124
+    },
+    {
+        "rank": 26,
+        "charId": 25,
+        "classId": "J2B",
+        "isKata": false,
+        "nickname": "ニックネーム",
+        "score": 124
+    },
+    {
+        "rank": 27,
+        "charId": 1,
+        "classId": "J2A",
+        "isKata": false,
+        "nickname": "はなちゃんの夫",
+        "score": 124
+    },
+    {
+        "rank": 28,
+        "charId": 13,
+        "classId": "G2D",
+        "isKata": false,
+        "nickname": "りな",
+        "score": 123
+    },
+    {
+        "rank": 29,
+        "charId": 37,
+        "classId": "G2B",
+        "isKata": false,
+        "nickname": "ゆうな",
+        "score": 122
+    },
+    {
+        "rank": 30,
+        "charId": 39,
+        "classId": "G2D",
+        "isKata": false,
+        "nickname": "すずな",
+        "score": 122
+    },
+    {
+        "rank": 31,
+        "charId": 7,
+        "classId": "J3A",
+        "isKata": true,
+        "nickname": "こまつ",
+        "score": 122
+    },
+    {
+        "rank": 32,
+        "charId": 35,
+        "classId": "T2B",
+        "isKata": false,
+        "nickname": "ああああ",
+        "score": 121
+    },
+    {
+        "rank": 33,
+        "charId": 99,
+        "classId": "J2B",
+        "isKata": true,
+        "nickname": "森大",
+        "score": 121
+    },
+    {
+        "rank": 34,
+        "charId": 27,
+        "classId": "G2H",
+        "isKata": false,
+        "nickname": "ひろむ",
+        "score": 120
+    },
+    {
+        "rank": 35,
+        "charId": 27,
+        "classId": "T1A",
+        "isKata": false,
+        "nickname": "なつ",
+        "score": 119
+    },
+    {
+        "rank": 36,
+        "charId": 11,
+        "classId": "G2C",
+        "isKata": false,
+        "nickname": "すかーれっと",
+        "score": 119
+    },
+    {
+        "rank": 37,
+        "charId": 24,
+        "classId": "T3B",
+        "isKata": false,
+        "nickname": "skyva",
+        "score": 116
+    },
+    {
+        "rank": 38,
+        "charId": 9,
+        "classId": "T3C",
+        "isKata": true,
+        "nickname": "とみた",
+        "score": 112
+    },
+    {
+        "rank": 39,
+        "charId": 3,
+        "classId": "NaN",
+        "isKata": true,
+        "nickname": "てんてん",
+        "score": 111
+    },
+    {
+        "rank": 40,
+        "charId": 8,
+        "classId": "G2D",
+        "isKata": true,
+        "nickname": "あやの",
+        "score": 111
+    },
+    {
+        "rank": 41,
+        "charId": 8,
+        "classId": "G2D",
+        "isKata": true,
+        "nickname": "あやの",
+        "score": 111
+    },
+    {
+        "rank": 42,
+        "charId": 29,
+        "classId": "J2A",
+        "isKata": false,
+        "nickname": "ヨッシー",
+        "score": 111
+    },
+    {
+        "rank": 43,
+        "charId": 13,
+        "classId": "T3B",
+        "isKata": false,
+        "nickname": "マルクス3号",
+        "score": 110
+    },
+    {
+        "rank": 44,
+        "charId": 13,
+        "classId": "T3B",
+        "isKata": false,
+        "nickname": "マルクス3号",
+        "score": 110
+    },
+    {
+        "rank": 45,
+        "charId": 20,
+        "classId": "J2A",
+        "isKata": false,
+        "nickname": "はなちゃんのお嫁さん",
+        "score": 108
+    },
+    {
+        "rank": 46,
+        "charId": 21,
+        "classId": "G3k",
+        "isKata": false,
+        "nickname": "りょうたろう",
+        "score": 108
+    },
+    {
+        "rank": 47,
+        "charId": 20,
+        "classId": "T2C",
+        "isKata": false,
+        "nickname": "ちくわ",
+        "score": 107
+    },
+    {
+        "rank": 48,
+        "charId": 17,
+        "classId": "G1A",
+        "isKata": true,
+        "nickname": "みこと",
+        "score": 107
+    },
+    {
+        "rank": 49,
+        "charId": 3,
+        "classId": "G1H",
+        "isKata": false,
+        "nickname": "ペニー",
+        "score": 106
+    },
+    {
+        "rank": 50,
+        "charId": 31,
+        "classId": "G1C",
+        "isKata": true,
+        "nickname": "ばんの",
+        "score": 105
+    },
+    {
+        "rank": 51,
+        "charId": 15,
+        "classId": "G2D",
+        "isKata": false,
+        "nickname": "まりん",
+        "score": 104
+    },
+    {
+        "rank": 52,
+        "charId": 33,
+        "classId": "T1B",
+        "isKata": false,
+        "nickname": "しどう",
+        "score": 103
+    },
+    {
+        "rank": 53,
+        "charId": 3,
+        "classId": "G2A",
+        "isKata": true,
+        "nickname": "うっちー",
+        "score": 102
+    },
+    {
+        "rank": 54,
+        "charId": 35,
+        "classId": "T2B",
+        "isKata": false,
+        "nickname": "ああああ",
+        "score": 102
+    },
+    {
+        "rank": 55,
+        "charId": 35,
+        "classId": "J3A",
+        "isKata": true,
+        "nickname": "イケメン",
+        "score": 101
+    },
+    {
+        "rank": 56,
+        "charId": 3,
+        "classId": "G1G",
+        "isKata": true,
+        "nickname": "すず",
+        "score": 101
+    },
+    {
+        "rank": 57,
+        "charId": 20,
+        "classId": "J1A",
+        "isKata": true,
+        "nickname": "かなた",
+        "score": 100
+    },
+    {
+        "rank": 58,
+        "charId": 27,
+        "classId": "T1A",
+        "isKata": false,
+        "nickname": "なつうまれのひと",
+        "score": 100
+    },
+    {
+        "rank": 59,
+        "charId": 19,
+        "classId": "J2B",
+        "isKata": false,
+        "nickname": "トマトイーター",
+        "score": 98
+    },
+    {
+        "rank": 60,
+        "charId": 34,
+        "classId": "G2G",
+        "isKata": true,
+        "nickname": "浅野先生",
+        "score": 98
+    },
+    {
+        "rank": 61,
+        "charId": 21,
+        "classId": "G2J",
+        "isKata": true,
+        "nickname": "なっちゃん",
+        "score": 98
+    },
+    {
+        "rank": 62,
+        "charId": 18,
+        "classId": "G2B",
+        "isKata": false,
+        "nickname": "あちゃっぺ",
+        "score": 97
+    },
+    {
+        "rank": 63,
+        "charId": 36,
+        "classId": "G2D",
+        "isKata": true,
+        "nickname": "りこ",
+        "score": 96
+    },
+    {
+        "rank": 64,
+        "charId": 10,
+        "classId": "T1A",
+        "isKata": true,
+        "nickname": "そら",
+        "score": 96
+    },
+    {
+        "rank": 65,
+        "charId": 27,
+        "classId": "T1A",
+        "isKata": false,
+        "nickname": "なつ",
+        "score": 95
+    },
+    {
+        "rank": 66,
+        "charId": 42,
+        "classId": "G2A",
+        "isKata": false,
+        "nickname": "やまね",
+        "score": 95
+    },
+    {
+        "rank": 67,
+        "charId": 36,
+        "classId": "G1H",
+        "isKata": false,
+        "nickname": "とまと",
+        "score": 95
+    },
+    {
+        "rank": 68,
+        "charId": 18,
+        "classId": "T3B",
+        "isKata": false,
+        "nickname": "マルクス2号",
+        "score": 94
+    },
+    {
+        "rank": 69,
+        "charId": 25,
+        "classId": "G2H",
+        "isKata": false,
+        "nickname": "りか",
+        "score": 91
+    },
+    {
+        "rank": 70,
+        "charId": 28,
+        "classId": "J2A",
+        "isKata": false,
+        "nickname": "てんさい",
+        "score": 91
+    },
+    {
+        "rank": 71,
+        "charId": 5,
+        "classId": "G2G",
+        "isKata": true,
+        "nickname": "せいゆう",
+        "score": 91
+    },
+    {
+        "rank": 72,
+        "charId": 5,
+        "classId": "G1H",
+        "isKata": false,
+        "nickname": "れい",
+        "score": 89
+    },
+    {
+        "rank": 73,
+        "charId": 2,
+        "classId": "J2B",
+        "isKata": true,
+        "nickname": "ぽこぽこ",
+        "score": 89
+    },
+    {
+        "rank": 74,
+        "charId": 10,
+        "classId": "G2D",
+        "isKata": true,
+        "nickname": "ゆら",
+        "score": 88
+    },
+    {
+        "rank": 75,
+        "charId": 15,
+        "classId": "T2B",
+        "isKata": false,
+        "nickname": "たいにー",
+        "score": 88
+    },
+    {
+        "rank": 76,
+        "charId": 9,
+        "classId": "T3B",
+        "isKata": true,
+        "nickname": "さがら",
+        "score": 87
+    },
+    {
+        "rank": 77,
+        "charId": 5,
+        "classId": "G2F",
+        "isKata": true,
+        "nickname": "もえか",
+        "score": 85
+    },
+    {
+        "rank": 78,
+        "charId": 19,
+        "classId": "J3A",
+        "isKata": false,
+        "nickname": "AMIDC部長",
+        "score": 85
+    },
+    {
+        "rank": 79,
+        "charId": 25,
+        "classId": "J2A",
+        "isKata": false,
+        "nickname": "まつい",
+        "score": 84
+    },
+    {
+        "rank": 80,
+        "charId": 8,
+        "classId": "T2A",
+        "isKata": false,
+        "nickname": "かとぴろ",
+        "score": 83
+    },
+    {
+        "rank": 81,
+        "charId": 12,
+        "classId": "T3A",
+        "isKata": false,
+        "nickname": "かんい",
+        "score": 83
+    },
+    {
+        "rank": 82,
+        "charId": 32,
+        "classId": "G1E",
+        "isKata": true,
+        "nickname": "いろは",
+        "score": 82
+    },
+    {
+        "rank": 83,
+        "charId": 29,
+        "classId": "G2B",
+        "isKata": false,
+        "nickname": "はこ",
+        "score": 80
+    },
+    {
+        "rank": 84,
+        "charId": 22,
+        "classId": "J2C",
+        "isKata": true,
+        "nickname": "ジョン",
+        "score": 80
+    },
+    {
+        "rank": 85,
+        "charId": 22,
+        "classId": "G2C",
+        "isKata": true,
+        "nickname": "ジョン",
+        "score": 80
+    },
+    {
+        "rank": 86,
+        "charId": 17,
+        "classId": "G2B",
+        "isKata": true,
+        "nickname": "おおしま",
+        "score": 80
+    },
+    {
+        "rank": 87,
+        "charId": 22,
+        "classId": "J2A",
+        "isKata": false,
+        "nickname": "なつめ",
+        "score": 78
+    },
+    {
+        "rank": 88,
+        "charId": 16,
+        "classId": "T3B",
+        "isKata": true,
+        "nickname": "まこと",
+        "score": 77
+    },
+    {
+        "rank": 89,
+        "charId": 10,
+        "classId": "G1C",
+        "isKata": false,
+        "nickname": "しっころ",
+        "score": 76
+    },
+    {
+        "rank": 90,
+        "charId": 25,
+        "classId": "G1C",
+        "isKata": false,
+        "nickname": "にっころ",
+        "score": 74
+    },
+    {
+        "rank": 91,
+        "charId": 34,
+        "classId": "G2B",
+        "isKata": false,
+        "nickname": "ささき",
+        "score": 73
+    },
+    {
+        "rank": 92,
+        "charId": 4,
+        "classId": "T1A",
+        "isKata": false,
+        "nickname": "うたうた",
+        "score": 72
+    },
+    {
+        "rank": 93,
+        "charId": 10,
+        "classId": "G2F",
+        "isKata": true,
+        "nickname": "ふぃん",
+        "score": 71
+    },
+    {
+        "rank": 94,
+        "charId": 20,
+        "classId": "G2E",
+        "isKata": true,
+        "nickname": "tk",
+        "score": 70
+    },
+    {
+        "rank": 95,
+        "charId": 18,
+        "classId": "T1B",
+        "isKata": true,
+        "nickname": "アレックス",
+        "score": 68
+    },
+    {
+        "rank": 96,
+        "charId": 17,
+        "classId": "T3B",
+        "isKata": false,
+        "nickname": "マルクス4号",
+        "score": 68
+    },
+    {
+        "rank": 97,
+        "charId": 14,
+        "classId": "T3B",
+        "isKata": false,
+        "nickname": "マルクス",
+        "score": 68
+    },
+    {
+        "rank": 98,
+        "charId": 6,
+        "classId": "T1B",
+        "isKata": false,
+        "nickname": "おおいしりゅうたろう",
+        "score": 66
+    },
+    {
+        "rank": 99,
+        "charId": 20,
+        "classId": "G2I",
+        "isKata": false,
+        "nickname": "パク",
+        "score": 66
+    },
+    {
+        "rank": 100,
+        "charId": 2,
+        "classId": "T3A",
+        "isKata": true,
+        "nickname": "みりゅう。",
+        "score": 65
+    },
+    {
+        "rank": 101,
+        "charId": 3,
+        "classId": "G2G",
+        "isKata": true,
+        "nickname": "かぼちゃ",
+        "score": 63
+    },
+    {
+        "rank": 102,
+        "charId": 23,
+        "classId": "G2I",
+        "isKata": false,
+        "nickname": "にしうら",
+        "score": 63
+    },
+    {
+        "rank": 103,
+        "charId": 37,
+        "classId": "G1G",
+        "isKata": false,
+        "nickname": "れいな",
+        "score": 63
+    },
+    {
+        "rank": 104,
+        "charId": 4,
+        "classId": "T1A",
+        "isKata": true,
+        "nickname": "うたうた",
+        "score": 63
+    },
+    {
+        "rank": 105,
+        "charId": 11,
+        "classId": "T1B",
+        "isKata": true,
+        "nickname": "たちおぶごっと",
+        "score": 62
+    },
+    {
+        "rank": 106,
+        "charId": 15,
+        "classId": "G2E",
+        "isKata": false,
+        "nickname": "rain",
+        "score": 62
+    },
+    {
+        "rank": 107,
+        "charId": 10,
+        "classId": "J2A",
+        "isKata": true,
+        "nickname": "しょう",
+        "score": 62
+    },
+    {
+        "rank": 108,
+        "charId": 9,
+        "classId": "G3C",
+        "isKata": false,
+        "nickname": "はるか",
+        "score": 61
+    },
+    {
+        "rank": 109,
+        "charId": 24,
+        "classId": "G2",
+        "isKata": false,
+        "nickname": "あるみかん",
+        "score": 61
+    },
+    {
+        "rank": 110,
+        "charId": 1,
+        "classId": "G2F",
+        "isKata": false,
+        "nickname": "あおきんぐ",
+        "score": 60
+    },
+    {
+        "rank": 111,
+        "charId": 28,
+        "classId": "G2I",
+        "isKata": false,
+        "nickname": "ひとかげ",
+        "score": 59
+    },
+    {
+        "rank": 112,
+        "charId": 31,
+        "classId": "G2B",
+        "isKata": true,
+        "nickname": "にしべ",
+        "score": 59
+    },
+    {
+        "rank": 113,
+        "charId": 1,
+        "classId": "T2B",
+        "isKata": false,
+        "nickname": "いしかわ",
+        "score": 57
+    },
+    {
+        "rank": 114,
+        "charId": 33,
+        "classId": "G2D",
+        "isKata": true,
+        "nickname": "ゆう",
+        "score": 55
+    },
+    {
+        "rank": 115,
+        "charId": 15,
+        "classId": "G2C",
+        "isKata": false,
+        "nickname": "クリリン",
+        "score": 55
+    },
+    {
+        "rank": 116,
+        "charId": 9,
+        "classId": "G2I",
+        "isKata": false,
+        "nickname": "かわしま",
+        "score": 54
+    },
+    {
+        "rank": 117,
+        "charId": 5,
+        "classId": "T2C",
+        "isKata": true,
+        "nickname": "りゅうさん",
+        "score": 53
+    },
+    {
+        "rank": 118,
+        "charId": 26,
+        "classId": "T1B",
+        "isKata": false,
+        "nickname": "たてあつ",
+        "score": 52
+    },
+    {
+        "rank": 119,
+        "charId": 10,
+        "classId": "T2C",
+        "isKata": false,
+        "nickname": "ばかめ",
+        "score": 52
+    },
+    {
+        "rank": 120,
+        "charId": 27,
+        "classId": "T2A",
+        "isKata": true,
+        "nickname": "あらた",
+        "score": 50
+    },
+    {
+        "rank": 121,
+        "charId": 9,
+        "classId": "G2J",
+        "isKata": true,
+        "nickname": "りな",
+        "score": 48
+    },
+    {
+        "rank": 122,
+        "charId": 24,
+        "classId": "T2B",
+        "isKata": true,
+        "nickname": "たち",
+        "score": 48
+    },
+    {
+        "rank": 123,
+        "charId": 24,
+        "classId": "T2B",
+        "isKata": true,
+        "nickname": "たち",
+        "score": 48
+    },
+    {
+        "rank": 124,
+        "charId": 30,
+        "classId": "J2B",
+        "isKata": true,
+        "nickname": "お前も目覚めの時が来たか",
+        "score": 47
+    },
+    {
+        "rank": 125,
+        "charId": 1,
+        "classId": "G1E",
+        "isKata": false,
+        "nickname": "ゆう",
+        "score": 47
+    },
+    {
+        "rank": 126,
+        "charId": 14,
+        "classId": "G2E",
+        "isKata": true,
+        "nickname": "けいご",
+        "score": 46
+    },
+    {
+        "rank": 127,
+        "charId": 46,
+        "classId": "G1C",
+        "isKata": true,
+        "nickname": "あきころ",
+        "score": 46
+    },
+    {
+        "rank": 128,
+        "charId": 14,
+        "classId": "G2E",
+        "isKata": true,
+        "nickname": "けいご",
+        "score": 46
+    },
+    {
+        "rank": 129,
+        "charId": 16,
+        "classId": "T1B",
+        "isKata": true,
+        "nickname": "かいと",
+        "score": 46
+    },
+    {
+        "rank": 130,
+        "charId": 24,
+        "classId": "J2A",
+        "isKata": true,
+        "nickname": "何でも良い",
+        "score": 45
+    },
+    {
+        "rank": 131,
+        "charId": 11,
+        "classId": "T1A",
+        "isKata": true,
+        "nickname": "ひかっち",
+        "score": 45
+    },
+    {
+        "rank": 132,
+        "charId": 19,
+        "classId": "G2E",
+        "isKata": true,
+        "nickname": "ゆーた",
+        "score": 44
+    },
+    {
+        "rank": 133,
+        "charId": 25,
+        "classId": "G2B",
+        "isKata": false,
+        "nickname": "み",
+        "score": 44
+    },
+    {
+        "rank": 134,
+        "charId": 18,
+        "classId": "J2A",
+        "isKata": false,
+        "nickname": "なすび",
+        "score": 43
+    },
+    {
+        "rank": 135,
+        "charId": 33,
+        "classId": "G2A",
+        "isKata": false,
+        "nickname": "そうたろう",
+        "score": 42
+    },
+    {
+        "rank": 136,
+        "charId": 42,
+        "classId": "G2B",
+        "isKata": true,
+        "nickname": "ゆま",
+        "score": 42
+    },
+    {
+        "rank": 137,
+        "charId": 27,
+        "classId": "G3E",
+        "isKata": false,
+        "nickname": "みずき",
+        "score": 41
+    },
+    {
+        "rank": 138,
+        "charId": 15,
+        "classId": "T2C",
+        "isKata": true,
+        "nickname": "シム",
+        "score": 40
+    },
+    {
+        "rank": 139,
+        "charId": 36,
+        "classId": "T2A",
+        "isKata": false,
+        "nickname": "めい",
+        "score": 38
+    },
+    {
+        "rank": 140,
+        "charId": 15,
+        "classId": "G1E",
+        "isKata": false,
+        "nickname": "あや",
+        "score": 38
+    },
+    {
+        "rank": 141,
+        "charId": 12,
+        "classId": "G2D",
+        "isKata": true,
+        "nickname": "あやね",
+        "score": 38
+    },
+    {
+        "rank": 142,
+        "charId": null,
+        "classId": "G2I",
+        "isKata": false,
+        "nickname": "",
+        "score": 38
+    },
+    {
+        "rank": 143,
+        "charId": 41,
+        "classId": "G2B",
+        "isKata": false,
+        "nickname": "ののか",
+        "score": 38
+    },
+    {
+        "rank": 144,
+        "charId": 100,
+        "classId": "T2A",
+        "isKata": true,
+        "nickname": "パンダ",
+        "score": 36
+    },
+    {
+        "rank": 145,
+        "charId": 27,
+        "classId": "T1A",
+        "isKata": false,
+        "nickname": "なつ",
+        "score": 36
+    },
+    {
+        "rank": 146,
+        "charId": 17,
+        "classId": "G2k",
+        "isKata": false,
+        "nickname": "ともまる",
+        "score": 36
+    },
+    {
+        "rank": 147,
+        "charId": 22,
+        "classId": "G2D",
+        "isKata": false,
+        "nickname": "あや",
+        "score": 35
+    },
+    {
+        "rank": 148,
+        "charId": 15,
+        "classId": "T2A",
+        "isKata": true,
+        "nickname": "はると",
+        "score": 32
+    },
+    {
+        "rank": 149,
+        "charId": 24,
+        "classId": "T1B",
+        "isKata": false,
+        "nickname": "maicn",
+        "score": 30
+    },
+    {
+        "rank": 150,
+        "charId": 1,
+        "classId": "G3H",
+        "isKata": true,
+        "nickname": "ろば",
+        "score": 30
+    },
+    {
+        "rank": 151,
+        "charId": 27,
+        "classId": "T2B",
+        "isKata": false,
+        "nickname": "ヘルサー",
+        "score": 25
+    },
+    {
+        "rank": 152,
+        "charId": 32,
+        "classId": "G2B",
+        "isKata": true,
+        "nickname": "32",
+        "score": 25
+    },
+    {
+        "rank": 153,
+        "charId": 35,
+        "classId": "T2A",
+        "isKata": true,
+        "nickname": "松",
+        "score": 23
+    },
+    {
+        "rank": 154,
+        "charId": 22,
+        "classId": "G3H",
+        "isKata": true,
+        "nickname": "けつげ",
+        "score": 22
+    },
+    {
+        "rank": 155,
+        "charId": 9,
+        "classId": "G2D",
+        "isKata": true,
+        "nickname": "ラテ",
+        "score": 22
+    },
+    {
+        "rank": 156,
+        "charId": 29,
+        "classId": "G1H",
+        "isKata": true,
+        "nickname": "りさ",
+        "score": 21
+    },
+    {
+        "rank": 157,
+        "charId": 5,
+        "classId": "T2A",
+        "isKata": true,
+        "nickname": "あいうえお",
+        "score": 19
+    },
+    {
+        "rank": 158,
+        "charId": 29,
+        "classId": "T2C",
+        "isKata": true,
+        "nickname": "教えてちょ",
+        "score": 15
+    },
+    {
+        "rank": 159,
+        "charId": 33,
+        "classId": "T2B",
+        "isKata": true,
+        "nickname": "みなちゃん",
+        "score": 14
+    },
+    {
+        "rank": 160,
+        "charId": 17,
+        "classId": "G2I",
+        "isKata": true,
+        "nickname": "かっつー",
+        "score": 14
+    },
+    {
+        "rank": 161,
+        "charId": 19,
+        "classId": "T2B",
+        "isKata": true,
+        "nickname": "さかな",
+        "score": 11
+    },
+    {
+        "rank": 162,
+        "charId": 17,
+        "classId": "G2J",
+        "isKata": true,
+        "nickname": "ゆき",
+        "score": 8
+    },
+    {
+        "rank": 163,
+        "charId": 33,
+        "classId": "G1C",
+        "isKata": false,
+        "nickname": "ぴっころ",
+        "score": 7
+    },
+    {
+        "rank": 164,
+        "charId": 4,
+        "classId": "J1A",
+        "isKata": true,
+        "nickname": "うたうた",
+        "score": 6
+    },
+    {
+        "rank": 165,
+        "charId": 15,
+        "classId": "T2B",
+        "isKata": true,
+        "nickname": "たいにー",
+        "score": 4
+    },
+    {
+        "rank": 166,
+        "charId": 4,
+        "classId": "T1A",
+        "isKata": false,
+        "nickname": "うたうた",
+        "score": 4
+    }
+]
