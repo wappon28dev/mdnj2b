@@ -30,7 +30,7 @@
     ];
 
     let active = tabs[0];
-    const hasFinished = false;
+    const hasFinished = true;
 
     onMount(() => {
         getSnapshot();
